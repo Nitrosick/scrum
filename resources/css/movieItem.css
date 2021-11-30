@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,600%7CSource+Sans+Pro:400,600,700%7CFresca");
+p::-moz-selection {
+    background: #ff4e33;
+}
+p::selection {
+    background: #ff4e33;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #21232e;
+}
+
+.header {
+    margin: 0 auto;
+    min-width: 1140px;
+    /* height: 100vh; */
+    background-repeat: no-repeat;
+    background-image: url(../images/m-h-night.jpg);
+    background-position: center;
+    background-size: cover;
+    /* border-bottom-right-radius: 500px; */
+    color: #ffffff;
+}
+.header-wrap {
+    margin: 0 auto;
+    width: 1140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.header-wrap .header_heading {
+    margin-bottom: 0;
+    font-family: "Source Sans Pro";
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 50px;
+    width: 400px;
+    margin-top: 42px;
+}
+.header-wrap .header_text {
+    width: 600px;
+    font-family: "Fresca";
+    white-space: pre-line;
+}
+.header-wrap .header_button {
+    margin-top: 50px;
+    margin-right: 100px;
+    width: 80px;
+    height: 30px;
+    background-color: #e3ac00;
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 0;
+    padding: 0;
+}
+.header-wrap .login {
+    color: #ffffff;
+    font-family: "Source Sans Pro";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.landing-logo,
+.footer-wrap .footer_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+}
+.landing-logo p,
+.footer-wrap .footer_logo p {
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: "Hind";
+    font-weight: bold;
+    line-height: 10px;
+    font-size: 18px;
+}
+.landing-logo p span,
+.footer-wrap .footer_logo p span {
+    font-weight: normal;
+    text-align: center;
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+.blind-block {
+    min-width: 100%;
+    height: 100px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0),
+        rgb(33, 35, 46)
+    );
+}
+.footer {
+    margin-top: 30px;
+    padding: 0;
+    height: 200px;
+    background-color: #3b3f50;
+    color: #c0c3ce;
+    font-family: 'Hind';
+    font-weight: bold;
+  }
+  .footer-wrap {
+    margin: 0 auto;
+    width: 1140px;
+    padding-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .footer-wrap .footer_logo {
+    margin: 0;
+  }
+  .footer-wrap .footer_text {
+    margin: 0 auto;
+    width: 350px;
+  }
