@@ -11,7 +11,7 @@
     <!-- Styles should be switched here: -->
 
     <!--<link rel="stylesheet" type="text/css" href="css/style1.css">-->
-    <link rel="stylesheet" type="text/css" href="./style2.css">
+    <link href="{{ asset('css/movieList.css') }}" rel="stylesheet">
 
     <title>Gotta Watch</title>
 </head>
@@ -19,10 +19,10 @@
 <body>
     <header class="header">
         <div class="header-wrap">
-            <div class="landing-logo">
-                <img src="../../images/m-logo.png" alt="logo" />
+            <a href="{{ url('/') }}" class="landing-logo">
+                <img src="/images/m-logo.png" alt="logo" />
                 <p>Gotta Watch<span>movie club</span></p>
-            </div>
+            </a>
             <p class="header_heading">
                 Join one of the awesome club
             </p>
@@ -33,7 +33,7 @@
             </p>
             <div>
                 <button class="header_button">Join us</button>
-                <a href="#" class="login">Already has an account</a>
+                <a href="{{ url('/dashboard') }}" class="login">Already has an account</a>
             </div>
         </div>
         <div class="blind-block"></div>
@@ -41,58 +41,58 @@
     <main class="section">
         <div class="section_card_wrap">
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-1.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-1.jpg" alt="experts" />
+                <a href="{{ url('/movies/1') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-2.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-2.jpg" alt="experts" />
+                <a href="{{ url('/movies/2') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-3.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-3.jpg" alt="experts" />
+                <a href="{{ url('/movies/3') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-1.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-1.jpg" alt="experts" />
+                <a href="{{ url('/movies/4') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-2.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-2.jpg" alt="experts" />
+                <a href="{{ url('/movies/5') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-3.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-3.jpg" alt="experts" />
+                <a href="{{ url('/movies/6') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-1.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-1.jpg" alt="experts" />
+                <a href="{{ url('/movies/7') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-2.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-2.jpg" alt="experts" />
+                <a href="{{ url('/movies/8') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
             <div class="section_card">
-                <img class="section_card_img" src="../../images/m-3.jpg" alt="experts" />
-                <button class="section_card_button">Подробнее</button>
-                <button class="section_card_favorite_button"><i class="far fa-heart"></i></button>
+                <img class="section_card_img" src="/images/m-3.jpg" alt="experts" />
+                <a href="{{ url('/movies/9') }}" class="section_card_button">Подробнее</a>
+                <a href="{{ url('/favourites') }}" class="section_card_favorite_button"><i class="far fa-heart"></i></a>
             </div>
         </div>
     </main>
     <footer class="footer">
         <div class="footer-wrap">
-            <div class="footer_logo landing-logo">
-                <img src="../../images/m-logo.png" alt="logo" />
+            <a href="{{ url('/') }}" class="footer_logo landing-logo">
+                <img src="/images/m-logo.png" alt="logo" />
                 <p>Gotta Watch<span>movie club</span></p>
-            </div>
+            </a>
             <p class="footer_text">
                 We create content and help people looking for a truly worthy films in the cinema world!
             </p>

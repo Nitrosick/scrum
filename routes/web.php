@@ -14,17 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Страница со списком фильмов
 Route::get('/', function () {
-    return view('welcome');
+    return view('movies.movieList');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-// Страница со списком фильмов
 Route::get('/movies', [MovieController::class, 'index'])
     ->name('movies');
 
@@ -36,3 +30,10 @@ Route::get('/favourites', [MovieController::class, 'get_favourites'])
 Route::get('/movies/{movie_id}', [MovieController::class, 'movie_by_id'])
     ->where('movie_id', '\d+')
 	->name('movie_by_id');
+
+// Страница авторизации
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
