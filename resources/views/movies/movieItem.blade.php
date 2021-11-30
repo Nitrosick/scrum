@@ -75,7 +75,20 @@
         </table>
     </div>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="footer-wrap">
+            <div class="footer_logo landing-logo">
+                <img src="img/m-logo.png" alt="logo" />
+                <p>Gotta Watch<span>movie club</span></p>
+            </div>
+            <p class="footer_text">
+                We create content and help people looking for a truly worthy films in the cinema world!
+            </p>
+            <span class="footer-cr">
+                &copy; 2021 by Gotta Watch movie club
+            </span>
+        </div>
+    </footer>
 </body>
 
 </html>
