@@ -15,12 +15,11 @@ body {
 .header {
     margin: 0 auto;
     min-width: 1140px;
-    /* height: 100vh; */
+    /* height: 550px; */
     background-repeat: no-repeat;
     background-image: url(../images/m-h-night.jpg);
     background-position: center;
     background-size: cover;
-    /* border-bottom-right-radius: 500px; */
     color: #ffffff;
 }
 .header-wrap {
@@ -41,7 +40,6 @@ body {
     font-weight: bold;
     line-height: 50px;
     width: 400px;
-    margin-top: 42px;
 }
 .header-wrap .header_text {
     width: 600px;
@@ -98,7 +96,6 @@ body {
     font-size: 9px;
     margin-top: 5px;
 }
-
 .blind-block {
     min-width: 100%;
     height: 100px;
@@ -108,16 +105,65 @@ body {
         rgb(33, 35, 46)
     );
 }
+.section {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+.section_card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section_card {
+    position: relative;
+    max-width: 300px;
+    /* max-height: 350px; */
+    margin: 20px 0;
+}
+.section_card_img {
+    width: 100%;
+    object-fit: cover;
+}
+.section_card_button {
+    position: absolute;
+    bottom: 14px;
+    right: 50%;
+    transform: translateX(50%);
+    background: cornflowerblue;
+    border-radius: 5%;
+    font-size: 20px;
+    border: 2px solid cornflowerblue;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.section_card_favorite_button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.section_card:hover .section_card_button {
+    display: block;
+}
+.section_card:hover .section_card_favorite_button {
+    display: block;
+}
+
 .footer {
     margin-top: 30px;
     padding: 0;
     height: 200px;
     background-color: #3b3f50;
     color: #c0c3ce;
-    font-family: 'Hind';
+    font-family: "Hind";
     font-weight: bold;
-  }
-  .footer-wrap {
+}
+.footer-wrap {
     margin: 0 auto;
     width: 1140px;
     padding-top: 100px;
@@ -130,11 +176,13 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-  }
-  .footer-wrap .footer_logo {
+}
+.footer-wrap .footer_logo {
     margin: 0;
-  }
-  .footer-wrap .footer_text {
+}
+.footer-wrap .footer_text {
     margin: 0 auto;
     width: 350px;
-  }
+}
+
+/*# sourceMappingURL=style2.css.map */
