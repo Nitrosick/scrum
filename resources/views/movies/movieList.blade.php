@@ -11,7 +11,7 @@
     <!-- Styles should be switched here: -->
 
     <!--<link rel="stylesheet" type="text/css" href="css/style1.css">-->
-    <link href="{{ asset('css/movieList.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/movieList.css') }}" rel="stylesheet">
 
     <title>Gotta Watch</title>
 </head>
