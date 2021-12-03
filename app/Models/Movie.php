@@ -12,11 +12,11 @@ class Movie extends Model
 
     protected $table = "movies_list";
     protected $fillable = [
-        'user_id', 'movie_id', 'priority'
+        'user_id', 'movie_id', 'title', 'image_link', 'priority'
     ];
 
-    // public function user(): BelongsTo
-    // {
-    //     return $this->belongsTo(User::class, 'user_id', 'id');
-    // }
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

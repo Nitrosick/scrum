@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MovieAddRequest;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 
@@ -54,12 +55,28 @@ class MovieController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\MovieAddRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(MovieAddRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        // if ($request->hasFile('image')) {
+        //     $uploadService = app(UploadService::class);
+        //     $imageUrl = $uploadService->upload($request->file('image'));
+        //     $data['image'] = $imageUrl;
+        // }
+
+        $news = Movie::create($data);
+
+		// if($news) {
+		// 	return redirect()
+		// 		->route('admin.news.index')
+        //         ->with('success', __('messages.admin.news.create.success'));
+		// }
+
+		return redirect()->route('movies.movieList');
     }
 
     /**

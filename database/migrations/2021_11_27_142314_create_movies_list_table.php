@@ -21,6 +21,8 @@ class CreateMoviesListTable extends Migration
 				->onDelete('cascade');
 
             $table->integer('movie_id')->unsigned();
+            $table->string('title', 255);
+            $table->string('image_link', 255);
             $table->integer('priority')->unsigned()->default(1);
             $table->timestamps();
         });
