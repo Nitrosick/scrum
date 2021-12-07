@@ -1,0 +1,19 @@
+.wrapper {
+    display: flex;
+    /* grid-template-columns: 25% 25% 50%; */
+    height: 100vh;
+    justify-content: flex-end;
+}
+.form-table {
+    align-self: center;
+    width: 25%;
+    margin-right: 20px;
+}
+.descr {
+    width: 50%;
+    display: flex;
+    padding: 0 50px;
+    background-color: rgb(132 79 236);
+    color: azure;
+    align-items: center;
+}
