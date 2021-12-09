@@ -37,9 +37,21 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function add_favourite($id)
+    {
+        //
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function movie_by_id($id)
     {
-        return view('movies.movieItem');
+        return view('movies.movieItem', [
+            'movieID' => $id
+        ]);
     }
 
     /**

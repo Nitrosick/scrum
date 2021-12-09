@@ -26,9 +26,12 @@ Route::get('/movies', [MovieController::class, 'index'])
 Route::get('/favourites', [MovieController::class, 'get_favourites'])
     ->name('favourites');
 
+// Добавление в список избранного
+Route::get('/favourites/add/{movie_id}', [MovieController::class, 'add_favourite'])
+    ->name('add_favourite');
+
 // Страница с информацией о фильме
 Route::get('/movies/{movie_id}', [MovieController::class, 'movie_by_id'])
-    ->where('movie_id', '\d+')
 	->name('movie_by_id');
 
 // Страница авторизации
