@@ -48,7 +48,8 @@ form {
 
 form img {
     margin-right: 5px;
-    height: 50px;    
+    height: 50px;
+    width: 100px;
 }
 
 .landing-logo {
@@ -172,22 +173,27 @@ main {
 
 .favorite-button {
     position: absolute;
-    right: 10px;
-    top: 10px;
-    background: transparent;    
-    height: 40px;
-    border: none;
-    font-size: 30px;
+    right: -5%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    height: 40px;    
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border-radius: 150px;
+    background-color: #fafafa;    
     cursor: pointer;
 }
-
-
-  .section_card:hover .section_card_button {
-    display: block;
-  }
-  .section_card:hover .section_card_favorite_button {
-    display: block;
-  }
+.favorite-button i {
+    font-size: 30px;
+    transition: .4s;
+}
+.favorite-button:hover i {
+    color: #f50057;
+}
+.fas {
+    color: #f50057;
+    transition: .4s;
+}
+ 
 .overview {
     position: absolute;
     left: 0;
