@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
+    <script src="https://kit.fontawesome.com/5702810b05.js" crossorigin="anonymous"></script>
     <title>Gotta Watch</title>
 </head>
 <body>
@@ -72,6 +73,5 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script>
-    <script></script> 
 </body>
 </html>
