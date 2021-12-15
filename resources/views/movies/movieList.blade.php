@@ -43,7 +43,7 @@
             <div class="landing-logo">
                 <img src="images/logo.png" alt="logo">
                 <div class="btn-wrapper">
-                    <button class="header_button">Join us</button>
+                    <button class="header_button" onClick='location.href="/dashboard"'>Join us</button>
                 </div>
                 <a href="#" class="login">Already has an account</a></div>
             </div>
@@ -55,6 +55,12 @@
     </header>
 
     <main id="main"></main>
+    <div class="pagination">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
+
     <footer class="footer">
         <div class="footer-wrap">
             <div class="footer_logo landing-logo">
@@ -72,6 +78,6 @@
     
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider.js"></script> 
 </body>
 </html>
