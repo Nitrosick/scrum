@@ -74,13 +74,13 @@ function showMovies(data) {
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
-    <a onClick="addToLocalStore(event, ${id})" class="movie-info-details" href="{{ url('/movies/${id}') }}">
+    <a onClick="addToLocalStore(event, ${id})" class="movie-info-details" href="/movies/${id}">
       <img src="${IMG_URL + poster_path}" alt="${title}">
       <div class="movie-info">
         <h3>${title}</h3>
         <span class="${getColor(vote_average)}">${vote_average}</span>
       </div>
-      <div class="overview"><h3>Overview</h3>${overview}</div>      
+      <div class="overview"><h3>Overview</h3>${overview}</div>
     </a>
     <button class="favorite-button" onClick="addToFavorite(event)"><i class="far fa-heart"></i></button>
     <div style="display: none;">${id}</div>
@@ -98,9 +98,41 @@ function addToFavorite(event) {
         target.classList.remove("fas");
         target.classList.add("far");
     }
+    // let id = target.parentElement.parentElement.lastElementChild.innerText;
+    // console.log(id);
+    // return id;
+
     let id = target.parentElement.parentElement.lastElementChild.innerText;
-    console.log(id);
-    return id;
+    let imgPath =
+        target.parentElement.parentElement.childNodes[1].childNodes[1].src;
+    let title =
+        target.parentElement.parentElement.childNodes[1].childNodes[3]
+        .firstElementChild.innerText;
+    const postData = {
+        id: id,
+        title: title,
+        img: imgPath,
+    };
+
+    try {
+        const response = fetch("/favourites/add", {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+        });
+
+        if (!response.ok) {
+        const message = "Error with Status Code: " + response.status;
+        throw new Error(message);
+        }
+
+        const data = response.json();
+        console.log(data);
+    } catch (error) {
+        console.log("Error: " + err);
+    }
 }
 
 function getColor(vote) {
@@ -166,7 +198,7 @@ function showBest(data) {
             const swiperItem = document.createElement("div");
             swiperItem.classList.add("swiper-slide");
             swiperItem.innerHTML = `
-      <img src="${IMG_URL + poster_path}" alt="${title}">  
+      <img src="${IMG_URL + poster_path}" alt="${title}">
       `;
             swiperSlide.appendChild(swiperItem);
         }

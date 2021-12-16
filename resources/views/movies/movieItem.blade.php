@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/slider.css">
     <script src="https://kit.fontawesome.com/5702810b05.js" crossorigin="anonymous"></script>
     <title>Gotta Watch</title>
 </head>
@@ -16,21 +16,21 @@
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div id="swiper" class="swiper-wrapper">
-              <!-- Slides -->  
+              <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="images/shang_chi.jpg" alt="movie">
+                    <img src="/images/shang_chi.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/french_dispatch.jpg" alt="movie">
+                    <img src="/images/french_dispatch.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/free_guy.jpg" alt="movie">
+                    <img src="/images/free_guy.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/dune.jpg" alt="movie">
+                    <img src="/images/dune.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/house_of_gucci.jpg" alt="movie">
+                    <img src="/images/house_of_gucci.jpg" alt="movie">
                 </div>
             </div>
             <!-- If we need pagination -->
@@ -42,13 +42,13 @@
         <form id="form">
             <div class="landing-logo">
                 <a href="{{ url('/') }}" class="landing-logo">
-                    <img src="img/logo.png" alt="logo">
+                    <img src="/images/logo.png" alt="logo">
                 </a>
                 <div class="btn-wrapper">
                     <button class="header_button">Join us</button>
                 </div>
                 <a href="{{ url('/dashboard') }}" class="login">Already has an account</a>
-            </div>            
+            </div>
         </form>
     </header>
 
@@ -57,7 +57,7 @@
     <footer class="footer">
         <div class="footer-wrap">
             <a class="footer_logo landing-logo" href="{{ route('movies') }}">
-                <img src="images/logo.png" alt="logo" width="100">
+                <img src="/images/logo.png" alt="logo" width="100">
             </a>
             <p class="footer_text">
                 WE CREATE CONTENT AND HELP PEOPLE LOOKING FOR A TRULY WORTHY FILMS IN THE CINEMA WORLD!
@@ -67,10 +67,10 @@
             </span>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="js/movieItem.js"></script>
-    <script src="js/slider.js"></script> 
+    <script src="/js/movieItem.js"></script>
+    <script src="/js/slider.js"></script>
 </body>
 
 </html>
