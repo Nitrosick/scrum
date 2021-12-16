@@ -15,7 +15,7 @@
     <header class="header">
         <div class="header-wrap">
             <a href="{{ url('/') }}" class="landing-logo">
-                <img src="/images/m-logo.png" alt="logo" />
+                <img src="/images/m-logo.png" alt="logo" width="100" />
                 <p>Gotta Watch<span>movie club</span></p>
             </a>
             <p class="header_heading">
@@ -77,15 +77,14 @@
 
     <footer class="footer">
         <div class="footer-wrap">
-            <a href="{{ url('/') }}" class="footer_logo landing-logo">
-                <img src="/images/m-logo.png" alt="logo" />
-                <p>Gotta Watch<span>movie club</span></p>
+            <a class="footer_logo landing-logo" href="{{ route('movies') }}">
+                <img src="images/logo.png" alt="logo" width="100">
             </a>
             <p class="footer_text">
-                We create content and help people looking for a truly worthy films in the cinema world!
+                WE CREATE CONTENT AND HELP PEOPLE LOOKING FOR A TRULY WORTHY FILMS IN THE CINEMA WORLD!
             </p>
             <span class="footer-cr">
-                &copy; 2021 by Gotta Watch movie club
+              © 2021 BY GOTTA WATCH MOVIE CLUB
             </span>
         </div>
     </footer>
