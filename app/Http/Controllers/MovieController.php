@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\MovieAddRequest;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MovieController extends Controller
 {
@@ -25,7 +26,16 @@ class MovieController extends Controller
      */
     public function get_favourites()
     {
-        $favouritesList = Movie::paginate(20);
+        // $userID = null;
+        $userID = 1;
+
+        // if (!Auth::check()) {
+        //     return redirect()->route('dashboard');
+        // } else {
+        //     $userID = Auth::user()->id;
+        // }
+
+        $favouritesList = Movie::where('user_id', $userID)->paginate(20);
 
         return view('movies.favourites', [
             'favouritesList' => $favouritesList
@@ -37,9 +47,11 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function add_favourite($id)
+    public function remove_favourite($id)
     {
-        //
+        Movie::find($id)->delete();
+
+        return redirect()->route('favourites');
     }
 
     /**
