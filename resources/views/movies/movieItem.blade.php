@@ -41,11 +41,13 @@
         </div>
         <form id="form">
             <div class="landing-logo">
-                <img src="img/logo.png" alt="logo">
+                <a href="{{ url('/') }}" class="landing-logo">
+                    <img src="img/logo.png" alt="logo">
+                </a>
                 <div class="btn-wrapper">
                     <button class="header_button">Join us</button>
                 </div>
-                <a href="#" class="login">Already has an account</a>
+                <a href="{{ url('/dashboard') }}" class="login">Already has an account</a>
             </div>            
         </form>
     </header>
@@ -54,15 +56,14 @@
 
     <footer class="footer">
         <div class="footer-wrap">
-            <div class="footer_logo landing-logo">
-                <img src="img/logo.png" alt="logo">
-                <p>Gotta Watch<span>movie club</span></p>
-            </div>
+            <a class="footer_logo landing-logo" href="{{ route('movies') }}">
+                <img src="images/logo.png" alt="logo" width="100">
+            </a>
             <p class="footer_text">
-                We create content and help people looking for a truly worthy films in the cinema world!
+                WE CREATE CONTENT AND HELP PEOPLE LOOKING FOR A TRULY WORTHY FILMS IN THE CINEMA WORLD!
             </p>
             <span class="footer-cr">
-              © 2021 by Gotta Watch movie club
+              © 2021 BY GOTTA WATCH MOVIE CLUB
             </span>
         </div>
     </footer>

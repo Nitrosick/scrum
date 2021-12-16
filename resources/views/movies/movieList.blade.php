@@ -16,7 +16,7 @@
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div id="swiper" class="swiper-wrapper">
-              <!-- Slides -->  
+              <!-- Slides -->
                 <div class="swiper-slide">
                     <img src="images/shang_chi.jpg" alt="movie">
                 </div>
@@ -41,15 +41,15 @@
         </div>
         <form id="form">
             <div class="landing-logo">
-                <img src="images/logo.png" alt="logo">
+                <img src="images/logo.png" alt="logo" width="100">
                 <div class="btn-wrapper">
-                    <button class="header_button" onClick='location.href="/dashboard"'>Join us</button>
+                    <button class="header_button">Join us</button>
                 </div>
-                <a href="#" class="login">Already has an account</a></div>
+                <a href="{{ url('/dashboard') }}" class="login">Already has an account</a></div>
             </div>
-            <div>                
+            <div>
             <div class="search-block">
-                <input type="text" placeholder="Search" id="search" class="search">                
+                <input type="text" placeholder="Search" id="search" class="search">
             </div>
         </form>
     </header>
@@ -63,19 +63,18 @@
 
     <footer class="footer">
         <div class="footer-wrap">
-            <div class="footer_logo landing-logo">
-                <img src="images/logo.png" alt="logo">
-                <p>Gotta Watch<span>movie club</span></p>
-            </div>
+            <a class="footer_logo landing-logo" href="{{ route('movies') }}">
+                <img src="images/logo.png" alt="logo" width="100">
+            </a>
             <p class="footer_text">
-                We create content and help people looking for a truly worthy films in the cinema world!
+                WE CREATE CONTENT AND HELP PEOPLE LOOKING FOR A TRULY WORTHY FILMS IN THE CINEMA WORLD!
             </p>
             <span class="footer-cr">
-              © 2021 by Gotta Watch movie club
+              © 2021 BY GOTTA WATCH MOVIE CLUB
             </span>
         </div>
     </footer>
-    
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/slider.js"></script> 
