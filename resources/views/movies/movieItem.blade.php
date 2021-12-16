@@ -18,19 +18,19 @@
             <div id="swiper" class="swiper-wrapper">
               <!-- Slides -->  
                 <div class="swiper-slide">
-                    <img src="img/shang_chi.jpg" alt="movie">
+                    <img src="images/shang_chi.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/french_dispatch.jpg" alt="movie">
+                    <img src="images/french_dispatch.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/free_guy.jpg" alt="movie">
+                    <img src="images/free_guy.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/dune.jpg" alt="movie">
+                    <img src="images/dune.jpg" alt="movie">
                 </div>
                 <div class="swiper-slide">
-                    <img src="img/house_of_gucci.jpg" alt="movie">
+                    <img src="images/house_of_gucci.jpg" alt="movie">
                 </div>
             </div>
             <!-- If we need pagination -->
