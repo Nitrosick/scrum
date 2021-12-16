@@ -125,6 +125,62 @@ form img {
     /*color: #7378c5;*/
 }
 
+section {
+    background-color: #eee;
+    margin: 4rem;
+    border-radius: 15px;
+}
+
+.general-info {
+    display: flex;
+}
+.general-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    max-height: 30px;
+}
+
+.general-info span.green {
+    color: lightgreen;
+}
+
+.general-info span.orange {
+    color: orange;
+}
+
+.general-info span.red {
+    color: red;
+}
+
+.general-info img {
+    max-width: 375px;
+    max-height: 563px;
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+.oneline {
+    display: flex;
+    align-items: center;
+}
+
+.oneline h4 {
+    padding-right: 1rem;
+}
+
+.companies-list {
+    margin: 0;
+    text-align: center;
+}
+
+.companies-list img {
+    margin: 0;
+    padding-right: 1rem;
+    max-width: 128px;    
+}
+
 main {
     flex-grow: 1;
     display: flex;
@@ -215,6 +271,36 @@ main {
 
 .movie:hover .overview {
     transform: translateY(0);
+}
+
+.no-results{
+    color:white;
+}
+
+.pagination{
+    display:flex;
+    margin:10px 30px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+
+.page{
+    padding:20px;
+    cursor:pointer;
+}
+
+.page.disabled{
+    cursor:not-allowed;
+    color:grey;
+}
+
+.current{
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 

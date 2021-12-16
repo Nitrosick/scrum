@@ -45,7 +45,7 @@
                 <div class="btn-wrapper">
                     <button class="header_button">Join us</button>
                 </div>
-                <a href="#" class="login">Already has an account</a></div>
+                <a href="{{ url('/dashboard') }}" class="login">Already has an account</a></div>
             </div>
             <div>
             <div class="search-block">
@@ -55,6 +55,12 @@
     </header>
 
     <main id="main"></main>
+    <div class="pagination">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
+
     <footer class="footer">
         <div class="footer-wrap">
             <a class="footer_logo landing-logo" href="{{ route('movies') }}">
@@ -71,6 +77,6 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/slider.js"></script> 
 </body>
 </html>
