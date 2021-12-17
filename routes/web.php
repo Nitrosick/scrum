@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 // Страница со списком фильмов
 Route::get('/', function () {
-    return view('movies.movieList');
+    return redirect()->route('movies');
 });
 
 Route::get('/movies', [MovieController::class, 'index'])
