@@ -89,37 +89,50 @@ function showMovies(data) {
     });
 }
 
-function addToFavorite(event) {
+async function addToFavorite(event) {
     let target = event.target;
     if (target.classList.contains("far")) {
-        target.classList.remove("far");
-        target.classList.add("fas");
+      target.classList.remove("far");
+      target.classList.add("fas");
     } else {
-        target.classList.remove("fas");
-        target.classList.add("far");
+      target.classList.remove("fas");
+      target.classList.add("far");
     }
-
     let id = target.parentElement.parentElement.lastElementChild.innerText;
     let imgPath =
-        target.parentElement.parentElement.childNodes[1].childNodes[1].src;
+      target.parentElement.parentElement.childNodes[1].childNodes[1].src;
     let title =
-        target.parentElement.parentElement.childNodes[1].childNodes[3]
-            .firstElementChild.innerText;
+      target.parentElement.parentElement.childNodes[1].childNodes[3]
+        .firstElementChild.innerText;
     const postData = {
-        id: id,
-        title: title,
-        img: imgPath,
+      movie_id: id,
+      title: title,
+      image_link: imgPath,
     };
-    const token = document.querySelector('meta[name="csrf-token"]').content;
-    fetch("/favourites/add", {
-        method: "PUT",
+
+    const token = document.head.querySelector('meta[name="csrf-token"]').content;
+
+    try {
+      const response = await fetch("/favourites/add", {
+        method: "post",
         headers: {
-            "Content-Type": "application/json; charset=UTF-8",
-            "X-CSRF-TOKEN": token,
-        },
+            "Content-Type": "application/json",
+            "X-CSRF-TOKEN": token
+          },
         body: JSON.stringify(postData),
-    });
-}
+      });
+
+      if (!response.ok) {
+        const message = "Error with Status Code: " + response.status;
+        throw new Error(message);
+      }
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log("Error: " + error);
+    }
+  }
 
 function getColor(vote) {
     if (vote >= 8) {

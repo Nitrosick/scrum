@@ -56,6 +56,7 @@
     </header>
 
     <main id="main"></main>
+
     <div class="pagination">
         <div class="page" id="prev">Previous Page</div>
         <div class="current" id="current">1</div>
@@ -78,6 +79,6 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/slider.js"></script> 
+    <script src="js/slider.js"></script>
 </body>
 </html>

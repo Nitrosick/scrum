@@ -26,14 +26,13 @@ class MovieController extends Controller
      */
     public function get_favourites()
     {
-        // $userID = null;
-        $userID = 1;
+        $userID = null;
 
-        // if (!Auth::check()) {
-        //     return redirect()->route('dashboard');
-        // } else {
-        //     $userID = Auth::user()->id;
-        // }
+        if (!Auth::check()) {
+            return redirect()->route('login');
+        } else {
+            $userID = Auth::user()->id;
+        }
 
         $favouritesList = Movie::where('user_id', $userID)->paginate(20);
 
@@ -84,23 +83,11 @@ class MovieController extends Controller
      */
     public function store(MovieAddRequest $request)
     {
+        $userID = Auth::user()->id;
         $data = $request->validated();
+        $data['user_id'] = $userID;
 
-        // if ($request->hasFile('image')) {
-        //     $uploadService = app(UploadService::class);
-        //     $imageUrl = $uploadService->upload($request->file('image'));
-        //     $data['image'] = $imageUrl;
-        // }
-
-        $news = Movie::create($data);
-
-		// if($news) {
-		// 	return redirect()
-		// 		->route('admin.news.index')
-        //         ->with('success', __('messages.admin.news.create.success'));
-		// }
-
-		return redirect()->route('movies.movieList');
+        Movie::create($data);
     }
 
     /**

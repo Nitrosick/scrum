@@ -33,7 +33,7 @@
                     </a>
                 </div>
             @empty
-                <h2>You don't have any movies in your favorites list</h2>
+                <h2 style="color: #EEEEEE">You don't have any movies in your favorites list</h2>
             @endforelse
         </div>
 

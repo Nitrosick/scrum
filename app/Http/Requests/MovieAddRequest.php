@@ -24,7 +24,7 @@ class MovieAddRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => 'required',
+            'user_id' => ['integer'],
             'movie_id' => ['required', 'integer'],
 			'title' => ['required', 'string', 'min:3'],
 			'image_link' => ['string', 'min:3'],
