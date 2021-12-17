@@ -16,7 +16,22 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return view('movies.movieList');
+        $userID = null;
+        $userFavourites = [];
+
+        if (Auth::check()) {
+            $userID = Auth::user()->id;
+            $array = Movie::where('user_id', $userID)->get('movie_id')->toArray();
+
+            foreach ($array as $value) {
+                $userFavourites[] = $value['movie_id'];
+            }
+        }
+
+        return view('movies.movieList', [
+            'userID' => $userID,
+            'userFavourites' => $userFavourites,
+        ]);
     }
 
     /**
