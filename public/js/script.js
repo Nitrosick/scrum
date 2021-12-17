@@ -98,41 +98,27 @@ function addToFavorite(event) {
         target.classList.remove("fas");
         target.classList.add("far");
     }
-    // let id = target.parentElement.parentElement.lastElementChild.innerText;
-    // console.log(id);
-    // return id;
 
     let id = target.parentElement.parentElement.lastElementChild.innerText;
     let imgPath =
         target.parentElement.parentElement.childNodes[1].childNodes[1].src;
     let title =
         target.parentElement.parentElement.childNodes[1].childNodes[3]
-        .firstElementChild.innerText;
+            .firstElementChild.innerText;
     const postData = {
         id: id,
         title: title,
         img: imgPath,
     };
-
-    try {
-        const response = fetch("/favourites/add", {
-        method: "post",
+    const token = document.querySelector('meta[name="csrf-token"]').content;
+    fetch("/favourites/add", {
+        method: "PUT",
         headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
+            "X-CSRF-TOKEN": token,
         },
         body: JSON.stringify(postData),
-        });
-
-        if (!response.ok) {
-        const message = "Error with Status Code: " + response.status;
-        throw new Error(message);
-        }
-
-        const data = response.json();
-        console.log(data);
-    } catch (error) {
-        console.log("Error: " + err);
-    }
+    });
 }
 
 function getColor(vote) {
